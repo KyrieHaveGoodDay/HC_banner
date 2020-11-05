@@ -5,3 +5,80 @@
     font-family: 微軟正黑體;
 }
 
+// 大盒子
+#kyrie-slider{
+    height: 100vh;
+    overflow: hidden; //隱藏多餘的
+        // 輪播項目
+        .kyrie-item{
+            width: 100%;
+            height: 100%;
+            // 相對定位
+            position: relative;
+            display: none;
+            // 圖片
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                // 絕對定位於相對定位
+                position: absolute;
+                animation-name: kyrieImg;
+                animation-duration: 1s;
+            }
+            // 標題
+            h1{
+                color: white;
+                font-size: 32px;
+                // 絕對定位於相對定位
+                position: absolute;
+                top:50px;
+                left: 50px;
+                text-shadow: 0 3px 3px rgba(0,0,0,0.3);
+                z-index: 2;
+                animation-name: kyrieTitle;
+                animation-duration: 0.8s;
+                animation-delay: 0.2s;
+                animation-fill-mode: backwards;  //停留在動畫開始的畫面
+            }
+        }
+
+        .kyrie-active{
+            display: block;
+        }
+        // 控制左右邊按扭區塊
+        #kyrie-prev , #kyrie-next {
+            width: 80px;
+            height: 150px;
+            background: #ffffff66;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        #kyrie-prev{
+            left: 0;
+        }
+        #kyrie-next{
+            right: 0;
+        }
+}
+
+// 動畫animation 必須先設定動畫的效果
+// @關鍵影格 動畫名稱
+@keyframes kyrieImg {
+    0%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes kyrieTitle {
+    0%{
+        transform: translateX(-500px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}

@@ -6,4 +6,112 @@
           box-sizing: border-box;
   font-family: 微軟正黑體;
 }
+
+#kyrie-slider {
+  height: 100vh;
+  overflow: hidden;
+}
+
+#kyrie-slider .kyrie-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: none;
+}
+
+#kyrie-slider .kyrie-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  -webkit-animation-name: kyrieImg;
+          animation-name: kyrieImg;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+#kyrie-slider .kyrie-item h1 {
+  color: white;
+  font-size: 32px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  -webkit-animation-name: kyrieTitle;
+          animation-name: kyrieTitle;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+#kyrie-slider .kyrie-active {
+  display: block;
+}
+
+#kyrie-slider #kyrie-prev, #kyrie-slider #kyrie-next {
+  width: 80px;
+  height: 150px;
+  background: #ffffff66;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#kyrie-slider #kyrie-prev {
+  left: 0;
+}
+
+#kyrie-slider #kyrie-next {
+  right: 0;
+}
+
+@-webkit-keyframes kyrieImg {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes kyrieImg {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes kyrieTitle {
+  0% {
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes kyrieTitle {
+  0% {
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
 /*# sourceMappingURL=style.css.map */
