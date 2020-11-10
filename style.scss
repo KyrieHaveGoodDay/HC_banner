@@ -39,7 +39,7 @@
                 animation-name: kyrieTitle;
                 animation-duration: 0.8s;
                 animation-delay: 0.2s;
-                animation-fill-mode: backwards;  //停留在動畫開始的畫面(從左邊進入)
+                animation-fill-mode: backwards;  //停留在動畫結束的畫面 (forwards 相反)
             }
         }
 
@@ -54,6 +54,7 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
+            cursor: pointer;
         }
         #kyrie-prev{
             left: 0;
@@ -61,6 +62,42 @@
         #kyrie-next{
             right: 0;
         }
+
+        // 輪播圖下面點點 
+        #kyrie-buttons{
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            .kyrie-button{
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                background: #ffffff77;
+                border-radius: 50%;
+                margin: 0 10px;
+                cursor: pointer;
+            }
+        }
+
+        .kyrie-button-active{
+            animation-name: kyriebutton;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;  //停留在動畫結束的畫面 (backwords相反)
+        }
+
+        
+}
+
+
+@keyframes kyriebutton{
+    0%{
+        background: #ffffff77;
+    }
+
+    100%{
+        background: #00000077;
+    }
 }
 
 // 動畫animation 必須先設定動畫的效果

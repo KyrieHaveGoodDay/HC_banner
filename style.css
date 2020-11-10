@@ -61,6 +61,7 @@
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  cursor: pointer;
 }
 
 #kyrie-slider #kyrie-prev {
@@ -69,6 +70,51 @@
 
 #kyrie-slider #kyrie-next {
   right: 0;
+}
+
+#kyrie-slider #kyrie-buttons {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#kyrie-slider #kyrie-buttons .kyrie-button {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: #ffffff77;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+#kyrie-slider .kyrie-button-active {
+  -webkit-animation-name: kyriebutton;
+          animation-name: kyriebutton;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes kyriebutton {
+  0% {
+    background: #ffffff77;
+  }
+  100% {
+    background: #00000077;
+  }
+}
+
+@keyframes kyriebutton {
+  0% {
+    background: #ffffff77;
+  }
+  100% {
+    background: #00000077;
+  }
 }
 
 @-webkit-keyframes kyrieImg {
