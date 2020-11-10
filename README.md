@@ -7,7 +7,12 @@ https://kyriehavegoodday.github.io/HC_banner/
 # 使用說明
 
 ## CDN
+    CSS這段加入head
+    <link rel="stylesheet" href="https://kyriehavegoodday.github.io/HC_banner/style.css">
 
+    JS這段加入body最底下
+    <script src="https://kyriehavegoodday.github.io/HC_banner/script.js"></script>
+    
 ## 架構
 ```
         <!-- data-slider-duration 自動撥放時間 -->
